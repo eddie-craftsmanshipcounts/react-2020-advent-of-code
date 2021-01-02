@@ -31,3 +31,5 @@ cypress/screenshots
 cypress/videos
 # Ignore starter examples -- so I can hold on to them locally for now
 cypress/integration/examples/
+
+.eslintcache
