@@ -23,3 +23,11 @@ yarn-debug.log*
 yarn-error.log*
 
 .idea/
+# Ignore starter fixtures -- so I can hold on to them locally for now
+cypress/fixtures/example.json
+cypress/fixtures/profile.json
+cypress/fixtures/users.json
+cypress/screenshots
+cypress/videos
+# Ignore starter examples -- so I can hold on to them locally for now
+cypress/integration/examples/
