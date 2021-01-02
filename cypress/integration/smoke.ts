@@ -1,11 +1,13 @@
 describe('Advent of Code', () => {
-    it('smokes', () => {
-        expect(true).to.be.true;
-    });
+    describe('smoke', function () {
+        it('can tell the truth', () => {
+            expect(true).to.be.true;
+        });
 
-    it('loads the starter page', () => {
-       cy.visit('/');
-       cy.get('a').should('contain.text', 'Learn React')
+        it('can find page content', () => {
+            cy.visit('/');
+            cy.get('a').should('contain.text', 'Learn React')
+        });
     });
 });
 
