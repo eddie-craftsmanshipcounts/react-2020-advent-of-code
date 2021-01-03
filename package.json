@@ -6,7 +6,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "watch-unit": "react-scripts test",
-    "ci-unit": "cross-env CI=true react-scripts test",
+    "ci-unit": "cross-env CI=true react-scripts test -- --coverage",
     "open-cypress": "cypress open",
     "cypress": "cypress run",
     "eject": "react-scripts eject"
