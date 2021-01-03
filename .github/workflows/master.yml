@@ -11,7 +11,6 @@ on:
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     strategy:
@@ -24,6 +23,15 @@ jobs:
       uses: actions/setup-node@v1
       with:
         node-version: ${{ matrix.node-version }}
-    - run:  |
-        npm i
-        npm run ci-unit -- --coverage
+    - run: npm install
+    - run: npm run ci-unit -- --coverage
+    - run: npm build
+    - name: Deploy to Firebase
+      uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: '${{ secrets.GITHUB_TOKEN }}'
+          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ADVENT_2020_REACT }}'
+          channelId: live
+          projectId: advent-2020-react
+        env:
+          FIREBASE_CLI_PREVIEWS: hostingchannels
