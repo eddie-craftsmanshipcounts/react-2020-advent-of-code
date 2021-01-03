@@ -28,10 +28,10 @@ jobs:
     - run: npm build
     - name: Deploy to Firebase
       uses: FirebaseExtended/action-hosting-deploy@v0
-        with:
-          repoToken: '${{ secrets.GITHUB_TOKEN }}'
-          firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ADVENT_2020_REACT }}'
-          channelId: live
-          projectId: advent-2020-react
-        env:
-          FIREBASE_CLI_PREVIEWS: hostingchannels
+      with:
+        repoToken: '${{ secrets.GITHUB_TOKEN }}'
+        firebaseServiceAccount: '${{ secrets.FIREBASE_SERVICE_ACCOUNT_ADVENT_2020_REACT }}'
+        channelId: live
+        projectId: advent-2020-react
+      env:
+        FIREBASE_CLI_PREVIEWS: hostingchannels
