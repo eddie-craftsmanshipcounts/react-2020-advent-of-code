@@ -26,4 +26,4 @@ jobs:
         node-version: ${{ matrix.node-version }}
     - run:  |
         npm i
-        npm run ci-unit
+        npm run ci-unit -- --coverage
