@@ -20,6 +20,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "watch-unit": "react-scripts test",
+    "ci-unit": "cross-env CI=true react-scripts test",
     "open-cypress": "cypress open",
     "cypress": "cypress run",
     "eject": "react-scripts eject"
@@ -43,6 +44,7 @@
     ]
   },
   "devDependencies": {
+    "cross-env": "^7.0.3",
     "cypress": "^6.2.0"
   }
 }
